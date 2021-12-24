@@ -1,0 +1,39 @@
+# Required to connect to your outgoing mail server. Example for using gmail:
+# gmail
+SMTP_SERVER: smtp.gmail.com
+SMTP_PORT: 587
+USERNAME: you@gmail.com
+PASSWORD: "you're-password"
+
+TIMEZONE: 'Europe/Moscow'
+
+PARTICIPANTS:
+  - Ivan <ivan@somewhere.net>
+  - Anton <anton@gmail.net>
+  - Anna <Anna@somedomain.net>
+  - Tanya <Tanya@hi.org>
+
+# Warning -- if you mess this up you could get an infinite loop
+DONT-PAIR:
+  - Artem, Anna    # Ivan and Anna are married
+  - Anton, Ivan   # Anton and Ivan are best friends
+  - Kostya, Rail
+
+# From address should be the organizer in case participants have any questions
+FROM: Secret Santa <you@gmail.net>
+
+# Both SUBJECT and MESSAGE can include variable substitution for the 
+# "santa" and "santee"
+SUBJECT: Your secret santa recipient is {santee}
+MESSAGE: 
+  <b>Dear {santa}</b>,
+  <br><br>
+  This year you are <b>{santee}'s</b> Secret Santa!. Ho Ho Ho!
+  <br><br>
+  Send some gift to wish you a Happy New Year.
+  <br><br>
+  {secret_santa_image}
+  <br><br>
+  This message was automagically generated from a computer. 
+  <br><br><br><br>
+  https://github.com/davydovk/secret-santa
