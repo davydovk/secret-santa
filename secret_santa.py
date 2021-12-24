@@ -194,23 +194,6 @@ def main(argv=None):
                 server.sendmail(frm, [to], msg.as_string())
                 print(f'Emailed {pair.giver.name} <{to}>')
 
-            # frm = config['FROM']
-            # to = pair.giver.email
-            # subject = config['SUBJECT'].format(santa=pair.giver.name, santee=pair.receiver.name)
-
-            # body = (HEADER + config['MESSAGE']).format(
-            #     date=date,
-            #     message_id=message_id,
-            #     frm=frm,
-            #     to=to,
-            #     subject=subject,
-            #     santa=pair.giver.name,
-            #     santee=pair.receiver.name,
-            # )
-            # if send:
-            #     server.sendmail(frm, [to], body)
-            #     print(f'Emailed {pair.giver.name} <{to}>')
-
         if send:
             server.quit()
 
