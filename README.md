@@ -14,6 +14,10 @@ pyyaml
 
 Usage
 -----
+Install the necessary packages
+
+    pip install requirements.txt
+
 
 Copy config.yml.template to config.yml and enter in the connection details 
 for your outgoing mail server. Modify the participants and couples lists and 
@@ -37,7 +41,7 @@ Here is the example configuration unchanged:
       - Ivan <ivan@somewhere.net>
       - Anton <anton@gmail.net>
       - Anna <Anna@somedomain.net>
-      - Tanya <Tanya@hi.org>
+      - Tanya <Tanya@somewhere.org>
 
     # Warning -- if you mess this up you could get an infinite loop
     DONT-PAIR:
